@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1562FC5158AEB7F89763ACAC /* Pods_random_user.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE530A67ECA660DAAFD686D0 /* Pods_random_user.framework */; };
+		4D2CA84D2657FE8A00D515D1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CA84C2657FE8A00D515D1 /* Coordinator.swift */; };
+		4D2CA8502657FEB700D515D1 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CA84F2657FEB700D515D1 /* Array+Extensions.swift */; };
+		4D2CA8522657FEE400D515D1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CA8512657FEE400D515D1 /* AppCoordinator.swift */; };
 		4D4AF31F6D18ACAB67A0E4CE /* Pods_random_user_random_userUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36443BB526313E01FF851F90 /* Pods_random_user_random_userUITests.framework */; };
 		4DF03E392657F78400056C2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF03E382657F78400056C2D /* AppDelegate.swift */; };
-		4DF03E3B2657F78400056C2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF03E3A2657F78400056C2D /* SceneDelegate.swift */; };
-		4DF03E3D2657F78400056C2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF03E3C2657F78400056C2D /* ViewController.swift */; };
-		4DF03E402657F78400056C2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DF03E3E2657F78400056C2D /* Main.storyboard */; };
 		4DF03E422657F78600056C2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF03E412657F78600056C2D /* Assets.xcassets */; };
 		4DF03E452657F78600056C2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DF03E432657F78600056C2D /* LaunchScreen.storyboard */; };
 		4DF03E502657F78700056C2D /* random_userTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF03E4F2657F78700056C2D /* random_userTests.swift */; };
@@ -41,11 +41,11 @@
 		027D6B73CDDA2FCA79A792F5 /* Pods-random-user.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-random-user.release.xcconfig"; path = "Target Support Files/Pods-random-user/Pods-random-user.release.xcconfig"; sourceTree = "<group>"; };
 		1B62CA677C95AC3572B26DB3 /* Pods-random-userTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-random-userTests.debug.xcconfig"; path = "Target Support Files/Pods-random-userTests/Pods-random-userTests.debug.xcconfig"; sourceTree = "<group>"; };
 		36443BB526313E01FF851F90 /* Pods_random_user_random_userUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_random_user_random_userUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D2CA84C2657FE8A00D515D1 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		4D2CA84F2657FEB700D515D1 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		4D2CA8512657FEE400D515D1 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		4DF03E352657F78400056C2D /* Random-user.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Random-user.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF03E382657F78400056C2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4DF03E3A2657F78400056C2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4DF03E3C2657F78400056C2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4DF03E3F2657F78400056C2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4DF03E412657F78600056C2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DF03E442657F78600056C2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DF03E462657F78600056C2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,6 +101,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4D2CA84B2657FE0700D515D1 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				4D2CA8512657FEE400D515D1 /* AppCoordinator.swift */,
+				4D2CA84C2657FE8A00D515D1 /* Coordinator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		4D2CA84E2657FEA900D515D1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4D2CA84F2657FEB700D515D1 /* Array+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4D2CA853265801C800D515D1 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				4DF03E412657F78600056C2D /* Assets.xcassets */,
+				4DF03E432657F78600056C2D /* LaunchScreen.storyboard */,
+				4DF03E462657F78600056C2D /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
 		4DF03E2C2657F78300056C2D = {
 			isa = PBXGroup;
 			children = (
@@ -127,12 +154,9 @@
 			isa = PBXGroup;
 			children = (
 				4DF03E382657F78400056C2D /* AppDelegate.swift */,
-				4DF03E3A2657F78400056C2D /* SceneDelegate.swift */,
-				4DF03E3C2657F78400056C2D /* ViewController.swift */,
-				4DF03E3E2657F78400056C2D /* Main.storyboard */,
-				4DF03E412657F78600056C2D /* Assets.xcassets */,
-				4DF03E432657F78600056C2D /* LaunchScreen.storyboard */,
-				4DF03E462657F78600056C2D /* Info.plist */,
+				4D2CA84E2657FEA900D515D1 /* Extensions */,
+				4D2CA84B2657FE0700D515D1 /* Navigation */,
+				4D2CA853265801C800D515D1 /* Supporting files */,
 			);
 			path = "random-user";
 			sourceTree = "<group>";
@@ -278,7 +302,6 @@
 			files = (
 				4DF03E452657F78600056C2D /* LaunchScreen.storyboard in Resources */,
 				4DF03E422657F78600056C2D /* Assets.xcassets in Resources */,
-				4DF03E402657F78400056C2D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,9 +429,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DF03E3D2657F78400056C2D /* ViewController.swift in Sources */,
+				4D2CA8522657FEE400D515D1 /* AppCoordinator.swift in Sources */,
+				4D2CA84D2657FE8A00D515D1 /* Coordinator.swift in Sources */,
+				4D2CA8502657FEB700D515D1 /* Array+Extensions.swift in Sources */,
 				4DF03E392657F78400056C2D /* AppDelegate.swift in Sources */,
-				4DF03E3B2657F78400056C2D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,14 +468,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4DF03E3E2657F78400056C2D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4DF03E3F2657F78400056C2D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4DF03E432657F78600056C2D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -587,7 +603,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TS27SG3ZSY;
-				INFOPLIST_FILE = "random-user/Info.plist";
+				INFOPLIST_FILE = "random-user/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -607,7 +623,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TS27SG3ZSY;
-				INFOPLIST_FILE = "random-user/Info.plist";
+				INFOPLIST_FILE = "random-user/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
