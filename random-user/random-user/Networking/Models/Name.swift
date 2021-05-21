@@ -11,4 +11,9 @@ struct Name: Codable {
     let title: String
     let first: String
     let last: String
+    
+    var full: String {
+        "\(first) \(last)"
+    }
+    
 }

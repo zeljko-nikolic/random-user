@@ -16,8 +16,8 @@ class AppCoordinator: Coordinator {
     }
     
     func setupWelcomeScene() {
-        let vc = UIViewController()
-        vc.view.backgroundColor = .systemBlue
+        let vc = AllUsersViewController()
+        
         rootViewController.setViewControllers([vc], animated: true)
     }
     

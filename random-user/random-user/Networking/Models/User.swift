@@ -14,6 +14,15 @@ struct User: Codable {
     let nationality: String
     let email: String
     
+    var nationalityFlag: String {
+        let base : UInt32 = 127397
+        var s = ""
+        for v in nationality.uppercased().unicodeScalars {
+            s.unicodeScalars.append(UnicodeScalar(base + v.value)!)
+        }
+        return s
+    }
+    
     enum CodingKeys: String, CodingKey {
         case name
         case dateOfBirth = "dob"
