@@ -12,10 +12,10 @@ class AppCoordinator: Coordinator {
     override func start() {
         window!.rootViewController = rootViewController
         window!.makeKeyAndVisible()
-        setupWelcomeScene()
+        setupAllUsersScene()
     }
     
-    func setupWelcomeScene() {
+    func setupAllUsersScene() {
         let vc = AllUsersViewController()
         vc.delegate = self
         rootViewController.setViewControllers([vc], animated: true)
@@ -29,7 +29,17 @@ extension AppCoordinator: AllUsersViewControllerDelegate {
     func allUsersViewController(_ allUsersViewController: AllUsersViewController, didSelect user: User) {
         let vc = UserViewController()
         vc.user = user
+        vc.delegate = self
         rootViewController.show(vc, sender: self)
     }
     
+}
+
+//MARK: - UserViewControllerDelegate
+extension AppCoordinator: UserViewControllerDelegate {
+    
+    func userViewController(_ userViewController: UserViewController, didTapOn email: String) {
+        print("GoToEmail")
+    }
+
 }

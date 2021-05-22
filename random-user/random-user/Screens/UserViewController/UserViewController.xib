@@ -23,27 +23,27 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ko7-tR-6bm">
-                    <rect key="frame" x="143" y="184" width="128" height="128"/>
+                    <rect key="frame" x="20" y="64" width="128" height="128"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="ko7-tR-6bm" secondAttribute="height" multiplier="1:1" id="3nL-U1-Ltm"/>
                         <constraint firstAttribute="height" constant="128" id="GGl-zM-KJL"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRa-VU-kSM" userLabel="Age Label">
-                    <rect key="frame" x="186" y="433" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fRa-VU-kSM" userLabel="Age Label">
+                    <rect key="frame" x="20" y="258" width="59" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImJ-RR-p51" userLabel="Email Label">
-                    <rect key="frame" x="186" y="504" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ImJ-RR-p51" userLabel="Email Label">
+                    <rect key="frame" x="20" y="303" width="59" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfy-9o-LKI" userLabel="Name Label">
-                    <rect key="frame" x="186" y="362" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xfy-9o-LKI" userLabel="Name Label">
+                    <rect key="frame" x="20" y="207" width="71" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -51,14 +51,17 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="ImJ-RR-p51" firstAttribute="top" secondItem="fRa-VU-kSM" secondAttribute="bottom" constant="50" id="3dy-xO-DdF"/>
-                <constraint firstItem="fRa-VU-kSM" firstAttribute="centerX" secondItem="xfy-9o-LKI" secondAttribute="centerX" id="6hT-az-drQ"/>
-                <constraint firstItem="xfy-9o-LKI" firstAttribute="top" secondItem="ko7-tR-6bm" secondAttribute="bottom" constant="50" id="9xV-hS-PIT"/>
-                <constraint firstItem="ko7-tR-6bm" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-200" id="AnB-rI-T1E"/>
-                <constraint firstItem="ko7-tR-6bm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Z05-DP-xlp"/>
-                <constraint firstItem="xfy-9o-LKI" firstAttribute="centerX" secondItem="ko7-tR-6bm" secondAttribute="centerX" id="eOF-Pa-AcV"/>
-                <constraint firstItem="ImJ-RR-p51" firstAttribute="centerX" secondItem="fRa-VU-kSM" secondAttribute="centerX" id="jdw-54-oHR"/>
-                <constraint firstItem="fRa-VU-kSM" firstAttribute="top" secondItem="xfy-9o-LKI" secondAttribute="bottom" constant="50" id="rpI-94-oCT"/>
+                <constraint firstItem="ImJ-RR-p51" firstAttribute="top" secondItem="fRa-VU-kSM" secondAttribute="bottom" constant="15" id="3dy-xO-DdF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ImJ-RR-p51" secondAttribute="trailing" constant="20" id="5iz-27-eiH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xfy-9o-LKI" secondAttribute="trailing" constant="20" id="693-ap-OWO"/>
+                <constraint firstItem="xfy-9o-LKI" firstAttribute="top" secondItem="ko7-tR-6bm" secondAttribute="bottom" constant="15" id="9xV-hS-PIT"/>
+                <constraint firstItem="ImJ-RR-p51" firstAttribute="leading" secondItem="fRa-VU-kSM" secondAttribute="leading" id="Tgt-hd-drU"/>
+                <constraint firstItem="xfy-9o-LKI" firstAttribute="leading" secondItem="ko7-tR-6bm" secondAttribute="leading" id="Xgo-Jg-420"/>
+                <constraint firstItem="ko7-tR-6bm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="cea-fP-HgH"/>
+                <constraint firstItem="fRa-VU-kSM" firstAttribute="leading" secondItem="xfy-9o-LKI" secondAttribute="leading" id="d3c-eD-UwH"/>
+                <constraint firstItem="ko7-tR-6bm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="hiJ-6I-aQz"/>
+                <constraint firstItem="fRa-VU-kSM" firstAttribute="top" secondItem="xfy-9o-LKI" secondAttribute="bottom" constant="15" id="rpI-94-oCT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fRa-VU-kSM" secondAttribute="trailing" constant="20" id="zOl-jT-LYo"/>
             </constraints>
             <point key="canvasLocation" x="-22" y="129"/>
         </view>

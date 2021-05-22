@@ -10,10 +10,10 @@ import Kingfisher
 
 class UserTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var ageLabel: UILabel!
-    @IBOutlet weak var flagLabel: UILabel!
-    @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var ageLabel: UILabel!
+    @IBOutlet private weak var flagLabel: UILabel!
+    @IBOutlet private weak var userImageView: UIImageView!
     
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -24,12 +24,8 @@ class UserTableViewCell: UITableViewCell {
         nameLabel.text = name
         ageLabel.text = "Age: \(age)"
         flagLabel.text = flag
-        userImageView.kf.setImage(
-            with: URL(string: imageUrl),
-            placeholder: UIImage(named: "ic-profile"),
-            options: [
-                .transition(.fade(1)),
-                .cacheOriginalImage
-            ])
+        userImageView.kf.setImage(with: URL(string: imageUrl),
+                                  placeholder: UIImage(named: "ic-profile"),
+                                  options: [.transition(.fade(1)),.cacheOriginalImage])
     }
 }
