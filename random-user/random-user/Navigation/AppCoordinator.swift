@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class AppCoordinator: Coordinator {
 
@@ -39,7 +40,33 @@ extension AppCoordinator: AllUsersViewControllerDelegate {
 extension AppCoordinator: UserViewControllerDelegate {
     
     func userViewController(_ userViewController: UserViewController, didTapOn email: String) {
-        print("GoToEmail")
+        if MFMailComposeViewController.canSendMail() {
+            let vc = MFMailComposeViewController()
+            vc.mailComposeDelegate = self
+            vc.setToRecipients([email])
+            rootViewController.present(vc, animated: true)
+        }
+        else {
+            let alert = UIAlertController(title: "Mail app unavailable", message: "There is no Mail app configured on this device, do you want to open the default email app?", preferredStyle: .alert)
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+            let ok = UIAlertAction(title: "Ok", style: .default, handler: { action in
+                if let url = URL(string: "mailto:\(email)") {
+                    UIApplication.shared.open(url)
+                }
+            })
+            alert.addAction(cancel)
+            alert.addAction(ok)
+            rootViewController.present(alert, animated: true)
+        }
     }
+    
+}
 
+//MARK: - MFMailComposeViewControllerDelegate
+extension AppCoordinator: MFMailComposeViewControllerDelegate {
+   
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
+    
 }
