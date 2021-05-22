@@ -7,15 +7,20 @@
 
 import UIKit
 
+protocol AllUsersViewControllerDelegate: AnyObject {
+    func allUsersViewController(_ allUsersViewController: AllUsersViewController, didSelect user: User)
+}
+
 final class AllUsersViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet private weak var tableView: UITableView!
     private var users: [User] = [] {
         didSet {
             tableView.reloadData()
         }
     }
+    
+    weak var delegate: AllUsersViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +70,7 @@ extension AllUsersViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.allUsersViewController(self, didSelect: users[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
     }
 

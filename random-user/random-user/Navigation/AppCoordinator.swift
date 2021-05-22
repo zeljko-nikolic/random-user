@@ -17,8 +17,17 @@ class AppCoordinator: Coordinator {
     
     func setupWelcomeScene() {
         let vc = AllUsersViewController()
-        
+        vc.delegate = self
         rootViewController.setViewControllers([vc], animated: true)
+    }
+    
+}
+
+//MARK: - AllUsersViewControllerDelegate
+extension AppCoordinator: AllUsersViewControllerDelegate {
+    
+    func allUsersViewController(_ allUsersViewController: AllUsersViewController, didSelect user: User) {
+        
     }
     
 }
