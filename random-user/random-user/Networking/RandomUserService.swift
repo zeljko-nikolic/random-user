@@ -19,6 +19,7 @@ class RandomUserService {
         var query = JSONDictionary()
         query.updateValue(numberOfUsers, forKey: Constants.resultsQuery)
         query.updateValue(page, forKey: Constants.pageQuery)
+        query.updateValue("name,email,dob,picture,nat,login", forKey: Constants.includeQuery)
         
         client.load(path: nil, method: .get, queryParams: query, bodyParams: nil) { data, urlResponse, error in
             if let responseError = error {

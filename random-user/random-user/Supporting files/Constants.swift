@@ -13,4 +13,5 @@ struct Constants {
     static let randomUserBaseUrl = "https://randomuser.me/api"
     static let resultsQuery = "results"
     static let pageQuery = "page"
+    static let includeQuery = "inc"
 }

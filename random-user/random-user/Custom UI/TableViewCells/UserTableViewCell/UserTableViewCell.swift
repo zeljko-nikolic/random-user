@@ -20,12 +20,12 @@ class UserTableViewCell: UITableViewCell {
         userImageView.image = nil
     }
     
-    func setup(name: String, age: Int, flag: String, imageUrl: String) {
-        nameLabel.text = name
-        ageLabel.text = "Age: \(age)"
-        flagLabel.text = flag
-        userImageView.kf.setImage(with: URL(string: imageUrl),
-                                  placeholder: UIImage(named: "ic-profile"),
+    func setup(user: User) {
+        nameLabel.text = user.name.full
+        ageLabel.text = "Age: \(user.dateOfBirth.age)"
+        flagLabel.text = user.nationalityFlag
+        userImageView.kf.indicatorType = .activity
+        userImageView.kf.setImage(with: URL(string: user.picture.large),
                                   options: [.transition(.fade(1)),.cacheOriginalImage])
     }
 }

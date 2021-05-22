@@ -13,6 +13,7 @@ struct User: Codable {
     let picture: Picture
     let nationality: String
     let email: String
+    let login: Login
     
     var nationalityFlag: String {
         let base : UInt32 = 127397
@@ -29,5 +30,16 @@ struct User: Codable {
         case picture
         case nationality = "nat"
         case email
+        case login
     }
+}
+
+extension User: Equatable {
+    static func == (lhs: User, rhs: User) -> Bool {
+        lhs.login.uuid == rhs.login.uuid
+    }
+}
+
+struct Login: Codable {
+    let uuid: String
 }
