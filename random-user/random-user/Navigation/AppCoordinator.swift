@@ -27,7 +27,9 @@ class AppCoordinator: Coordinator {
 extension AppCoordinator: AllUsersViewControllerDelegate {
     
     func allUsersViewController(_ allUsersViewController: AllUsersViewController, didSelect user: User) {
-        
+        let vc = UserViewController()
+        vc.user = user
+        rootViewController.show(vc, sender: self)
     }
     
 }
