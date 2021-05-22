@@ -24,6 +24,12 @@ class UserTableViewCell: UITableViewCell {
         nameLabel.text = name
         ageLabel.text = "Age: \(age)"
         flagLabel.text = flag
-        userImageView.kf.setImage(with: URL(string: imageUrl))
+        userImageView.kf.setImage(
+            with: URL(string: imageUrl),
+            placeholder: UIImage(named: "ic-profile"),
+            options: [
+                .transition(.fade(1)),
+                .cacheOriginalImage
+            ])
     }
 }
