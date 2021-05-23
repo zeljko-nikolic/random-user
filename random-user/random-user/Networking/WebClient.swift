@@ -17,7 +17,7 @@ enum RequestMethod: String {
 
 class WebClient {
     
-    private var baseUrl: String
+    var baseUrl: String
     
     //MARK: - Init
     required init(baseUrl: String) {

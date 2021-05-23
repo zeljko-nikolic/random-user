@@ -11,8 +11,8 @@ class RandomUserService {
     
     private var client: WebClient
     
-    init() {
-        client = WebClient(baseUrl: Constants.randomUserBaseUrl)
+    init(client: WebClient = WebClient(baseUrl: Constants.randomUserBaseUrl)) {
+        self.client = client
     }
     
     func getRandomUsers(numberOfUsers: Int, page: Int, completion: @escaping (Result<RandomUserResponse, Error>) -> Void) {
