@@ -14,18 +14,24 @@ protocol UserViewControllerDelegate: AnyObject {
 
 class UserViewController: UIViewController {
 
-    @IBOutlet private weak var userImageView: UIImageView!
-    @IBOutlet private weak var nameLabel: UILabel!
-    @IBOutlet private weak var ageLabel: UILabel!
-    @IBOutlet private weak var emailLabel: UILabel!
+    @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var ageLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
     
     var user: User!
     var delegate: UserViewControllerDelegate?
     
+    //MARK: - Override
     override func viewDidLoad() {
         super.viewDidLoad()
         setupEmailLabel()
         populateData()
+    }
+    
+    //MARK: - Public
+    @objc func onEmailTapped() {
+        delegate?.userViewController(self, didTapOn: user.email)
     }
     
     //MARK: - Private
@@ -33,10 +39,6 @@ class UserViewController: UIViewController {
         emailLabel.textColor = .link
         emailLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onEmailTapped)))
         emailLabel.isUserInteractionEnabled = true
-    }
-    
-    @objc private func onEmailTapped() {
-        delegate?.userViewController(self, didTapOn: user.email)
     }
     
     private func populateData() {
