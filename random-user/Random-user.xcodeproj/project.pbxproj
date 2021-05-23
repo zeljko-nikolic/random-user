@@ -31,6 +31,7 @@
 		4D81F581265A95DE0050639E /* allUsersData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D81F57F265A95DE0050639E /* allUsersData.json */; };
 		4D81F584265ACB7E0050639E /* UserViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81F583265ACB7E0050639E /* UserViewControllerTestCase.swift */; };
 		4DB3820F265AE1FF001D8656 /* AppCoordinatorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB3820E265AE1FF001D8656 /* AppCoordinatorTestCase.swift */; };
+		4DB38213265B0651001D8656 /* AllUsersViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB38212265B0651001D8656 /* AllUsersViewControllerTestCase.swift */; };
 		4DF03E392657F78400056C2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF03E382657F78400056C2D /* AppDelegate.swift */; };
 		4DF03E422657F78600056C2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF03E412657F78600056C2D /* Assets.xcassets */; };
 		4DF03E452657F78600056C2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DF03E432657F78600056C2D /* LaunchScreen.storyboard */; };
@@ -82,6 +83,7 @@
 		4D81F57F265A95DE0050639E /* allUsersData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = allUsersData.json; sourceTree = "<group>"; };
 		4D81F583265ACB7E0050639E /* UserViewControllerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewControllerTestCase.swift; sourceTree = "<group>"; };
 		4DB3820E265AE1FF001D8656 /* AppCoordinatorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTestCase.swift; sourceTree = "<group>"; };
+		4DB38212265B0651001D8656 /* AllUsersViewControllerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUsersViewControllerTestCase.swift; sourceTree = "<group>"; };
 		4DF03E352657F78400056C2D /* Random-user.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Random-user.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF03E382657F78400056C2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DF03E412657F78600056C2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -298,11 +300,12 @@
 		4DF03E4E2657F78700056C2D /* random-userTests */ = {
 			isa = PBXGroup;
 			children = (
+				4DB38212265B0651001D8656 /* AllUsersViewControllerTestCase.swift */,
+				4DB3820E265AE1FF001D8656 /* AppCoordinatorTestCase.swift */,
 				4DF03E512657F78700056C2D /* Info.plist */,
 				4D81F582265A95E50050639E /* mocks */,
 				4DF03E4F2657F78700056C2D /* RandomUserServiceTestCase.swift */,
 				4D81F583265ACB7E0050639E /* UserViewControllerTestCase.swift */,
-				4DB3820E265AE1FF001D8656 /* AppCoordinatorTestCase.swift */,
 			);
 			path = "random-userTests";
 			sourceTree = "<group>";
@@ -595,6 +598,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D81F584265ACB7E0050639E /* UserViewControllerTestCase.swift in Sources */,
+				4DB38213265B0651001D8656 /* AllUsersViewControllerTestCase.swift in Sources */,
 				4DF03E502657F78700056C2D /* RandomUserServiceTestCase.swift in Sources */,
 				4DB3820F265AE1FF001D8656 /* AppCoordinatorTestCase.swift in Sources */,
 			);

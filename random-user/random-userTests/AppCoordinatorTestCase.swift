@@ -9,29 +9,29 @@ import XCTest
 @testable import Random_user
 @testable import MessageUI
 
-class AppCoordinatorTestCase: XCTestCase {
+final class AppCoordinatorTestCase: XCTestCase {
     
     var user: User!
     var sut: AppCoordinator!
     
     override func setUp() {
         user = User(name: Name(title: "Dr.Mr.",
-                                   first: "Zeljko",
-                                   last: "Nikolic"),
-                        dateOfBirth: DateOfBirth(date: Date(), age: 30),
-                        picture: Picture(large: "https://img.rs",
-                                         medium: "https://img.rs",
-                                         thumbnail: "https://img.rs"),
-                        nationality: "RS",
-                        email: "zeksa90@gmail.com",
-                        login: Login(uuid: UUID().uuidString))
+                               first: "Zeljko",
+                               last: "Nikolic"),
+                    dateOfBirth: DateOfBirth(date: Date(), age: 30),
+                    picture: Picture(large: "https://img.rs",
+                                     medium: "https://img.rs",
+                                     thumbnail: "https://img.rs"),
+                    nationality: "RS",
+                    email: "zeksa90@gmail.com",
+                    login: Login(uuid: UUID().uuidString))
     }
     
     override func tearDown() {
         sut = nil
         user = nil
     }
-
+    
     func test_coordinatorFlow() {
         let window = UIWindow(frame: UIScreen.main.bounds)
         sut = AppCoordinator(window: window)
@@ -52,7 +52,7 @@ class AppCoordinatorTestCase: XCTestCase {
         
         userVC.onEmailTapped()
         RunLoop.current.run(until: Date(timeIntervalSinceNow: 0.3))
-
+        
         if MFMailComposeViewController.canSendMail() {
             XCTAssert(sut.rootViewController.presentedViewController is MFMailComposeViewController)
         }

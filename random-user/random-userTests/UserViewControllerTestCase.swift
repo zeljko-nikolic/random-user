@@ -8,7 +8,7 @@
 import XCTest
 @testable import Random_user
 
-class UserViewControllerTestCase: XCTestCase {
+final class UserViewControllerTestCase: XCTestCase {
     
     var user: User!
     
@@ -30,7 +30,7 @@ class UserViewControllerTestCase: XCTestCase {
     }
     
     func test_ViewLoading() {
-        let sut: UserViewController = UserViewController()
+        let sut = UserViewController()
         sut.user = user
         sut.loadViewIfNeeded()
         
