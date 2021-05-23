@@ -10,7 +10,7 @@ import XCTest
 
 final class RandomUserServiceTestCase: XCTestCase {
     
-    let timeout: TimeInterval = 1
+    let timeout: TimeInterval = 20
     var expectation: XCTestExpectation!
 
     override func setUpWithError() throws {
@@ -60,6 +60,18 @@ final class RandomUserServiceTestCase: XCTestCase {
         }
         waitForExpectations(timeout: timeout)
     }
+    
+    func test_RandomUserService_NetworkCall_success() {
+        let sut = RandomUserService(client: WebClient(baseUrl: Constants.randomUserBaseUrl))
+        sut.getRandomUsers(numberOfUsers: 20, page: 1) { result in
+            if case .success(let randomUserResponse) = result {
+                XCTAssertNotNil(randomUserResponse)
+            }
+            self.expectation.fulfill()
+        }
+        waitForExpectations(timeout: timeout)
+    }
+    
     
     //MARK: - FakeWebClient
     class FakeWebClient: WebClient {
