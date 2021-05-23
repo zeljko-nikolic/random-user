@@ -13,7 +13,7 @@ final class RandomUserServiceTestCase: XCTestCase {
     let timeout: TimeInterval = 20
     var expectation: XCTestExpectation!
 
-    override func setUpWithError() throws {
+    override func setUp() {
         expectation = expectation(description: "Server responds in reasonable time")
     }
     

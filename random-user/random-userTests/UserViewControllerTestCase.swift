@@ -25,11 +25,14 @@ class UserViewControllerTestCase: XCTestCase {
                         login: Login(uuid: UUID().uuidString))
     }
     
+    override func tearDown() {
+        user = nil
+    }
+    
     func test_ViewLoading() {
         let sut: UserViewController = UserViewController()
         sut.user = user
         sut.loadViewIfNeeded()
-        sut.viewDidLoad()
         
         XCTAssertEqual(sut.nameLabel.text, "Zeljko Nikolic")
         XCTAssertEqual(sut.ageLabel.text, "Age: 30")
@@ -42,7 +45,6 @@ class UserViewControllerTestCase: XCTestCase {
         let spyDelegate = SpyUserViewControllerDelegate()
         sut.delegate = spyDelegate
         sut.loadViewIfNeeded()
-        sut.viewDidLoad()
         
         XCTAssertEqual(spyDelegate.email, nil)
         sut.onEmailTapped()

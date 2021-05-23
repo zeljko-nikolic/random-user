@@ -75,7 +75,7 @@ final class AllUsersViewController: UIViewController {
                         
                         let startIndex = self.users.count - userResponse.results.count
                         let endIndex = startIndex + userResponse.results.count - 1
-                        let newIndexPaths = (startIndex...endIndex).map { IndexPath(row: $0, section: 0)}
+                        let newIndexPaths = (startIndex...endIndex).map { IndexPath(row: $0, section: 0) }
                         let visibleIndexPaths = Set(self.tableView.indexPathsForVisibleRows ?? [])
                         let indexPathsNeedingReload = Set(newIndexPaths).intersection(visibleIndexPaths)
                         self.tableView.reloadRows(at: Array(indexPathsNeedingReload), with: .fade)
