@@ -46,9 +46,9 @@ final class UserViewControllerTestCase: XCTestCase {
         sut.delegate = spyDelegate
         sut.loadViewIfNeeded()
         
-        XCTAssertEqual(spyDelegate.email, nil)
+        XCTAssertNil(spyDelegate.email)
         sut.onEmailTapped()
-        XCTAssertEqual(spyDelegate.email, sut.emailLabel.text)
+        XCTAssertNotNil(spyDelegate.email)
     }
 
     class SpyUserViewControllerDelegate: UserViewControllerDelegate {
